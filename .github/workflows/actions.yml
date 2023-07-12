@@ -1,8 +1,8 @@
 on:
-  pull_request:
-    types: [opened]
-    paths:
-      - my-folder/*
+  pull_request
+  # types: [opened]
+  # paths:
+  #   - my-folder/*
 
 jobs:
   storybook-preview-comment:
@@ -15,5 +15,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `#${context.issue.number} #${context.issue.id}`
+              body: `#${context.issue.number} #${github.event.issue.number} #${github.event.issue.id}`
             })
