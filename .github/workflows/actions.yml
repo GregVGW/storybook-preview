@@ -2,7 +2,7 @@ on:
   pull_request:
     types: [opened]
     paths:
-      - my-folder/*
+      - my-folder/**
 
 jobs:
   storybook-preview-comment:
