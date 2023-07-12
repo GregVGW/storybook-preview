@@ -6,7 +6,6 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.MY_PAT }}
           script: |
             await github.rest.issues.createComment({
               issue_number: context.issue.number,
