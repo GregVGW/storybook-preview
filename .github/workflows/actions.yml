@@ -2,7 +2,7 @@ on:
   pull_request:
     types: [opened]
     paths:
-      - packages/games//*
+      - my-folder/**
 
 jobs:
   storybook-preview-comment:
